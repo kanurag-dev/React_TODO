@@ -1,0 +1,57 @@
+.todo-list{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 100px;
+}
+h1{
+    font-size: 4rem;
+}
+button{
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+.add-btn{
+    background-color: rgb(1, 129, 1);
+}
+.add-btn:hover{
+    background-color: rgb(89, 189, 89);
+}
+.del-btn{
+    background-color: rgb(146, 0, 0);
+}
+.del-btn:hover{
+    background-color: rgb(209, 87, 87);
+}
+.mov-btn{
+    background-color: rgb(11, 108, 165);
+}
+.mov-btn:hover{
+    background-color: rgb(80, 163, 211);
+}
+input[type="text"]{
+    font-size: 1.6rem;
+    padding: 2rem;
+    border: 2px solid grey;
+    border-radius: 5px;
+    color: black;
+}
+li{
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.712);
+    list-style: none;
+    margin-bottom: 10px;
+    border: 3px solid rgb(207, 200, 200);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.text{
+    flex: 1;
+}

@@ -10,8 +10,9 @@ const Todolist = () => {
 
     }
     function addTask(){
+        if(newtask.trim()!==""){
         setTasks([...tasks,newtask]);
-        setNewtask("");
+        setNewtask("");}
 
     }
     function deleteTask(index){
@@ -19,6 +20,7 @@ const Todolist = () => {
 
     }
     function moveUp(index){
+        if(index===0)return;
         let copy=[...tasks];
         let temp=copy[index-1];
         copy[index-1]=copy[index];
@@ -27,7 +29,9 @@ const Todolist = () => {
 
     }
     function moveDown(index){
+        
         let copy=[...tasks];
+        if(index===copy.length-1)return;
         let temp=copy[index+1];
         copy[index+1]=copy[index];
         copy[index]=temp;

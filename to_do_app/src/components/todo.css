@@ -1,57 +1,80 @@
 .todo-list{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 60px;
 }
+
 h1{
-    font-size: 4rem;
+    font-size: 3.5rem;
+    margin-bottom: 25px;
 }
+
 button{
-    font-size: 1.7rem;
+    font-size: 1rem;
     font-weight: bold;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.5s ease;
+    transition: background-color 0.3s ease;
+    padding: 10px 15px;
+    margin-left: 8px;
 }
+
 .add-btn{
     background-color: rgb(1, 129, 1);
 }
+
 .add-btn:hover{
     background-color: rgb(89, 189, 89);
 }
+
 .del-btn{
     background-color: rgb(146, 0, 0);
 }
+
 .del-btn:hover{
     background-color: rgb(209, 87, 87);
 }
+
 .mov-btn{
     background-color: rgb(11, 108, 165);
 }
+
 .mov-btn:hover{
     background-color: rgb(80, 163, 211);
 }
+
 input[type="text"]{
-    font-size: 1.6rem;
-    padding: 2rem;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    width: 350px;
     border: 2px solid grey;
-    border-radius: 5px;
-    color: black;
+    border-radius: 6px;
+    margin-right: 10px;
 }
+
+ol{
+    width: 700px;
+    margin: 30px auto;
+    padding: 0;
+}
+
 li{
-    font-size: 2rem;
+    font-size: 1.3rem;
     font-weight: bold;
-    padding: 15px;
-    background-color: rgba(255, 255, 255, 0.712);
+    padding: 15px 20px;
+    background-color: white;
     list-style: none;
-    margin-bottom: 10px;
-    border: 3px solid rgb(207, 200, 200);
+    margin-bottom: 12px;
+    border: 2px solid rgb(207, 200, 200);
+    border-radius: 8px;
+
     display: flex;
     align-items: center;
-    justify-content: center;
 }
-.text{
+
+li span{
     flex: 1;
+    text-align: left;
 }

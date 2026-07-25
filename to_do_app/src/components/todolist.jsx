@@ -11,7 +11,7 @@ const Todolist = () => {
     }
     function addTask(){
         if(newtask.trim()!==""){
-        setTasks([...tasks,newtask]);
+        setTasks([...tasks,{text:newtask,completed:false},]);
         setNewtask("");}
 
     }
@@ -38,6 +38,13 @@ const Todolist = () => {
         setTasks(copy)
 
     }
+    function strike(index){
+        let copy=[...tasks];
+
+        copy[index].completed=copy[index].completed?false:true;
+        setTasks(copy);
+
+    }
 
     
 
@@ -56,7 +63,10 @@ const Todolist = () => {
     <ol>{
             tasks.map((task,index)=>
                 <li key={index}>
-                    <span>{task}</span>
+                    <input type="checkbox" value={task.completed} name="check" id="check" onClick={()=>strike(index)} />
+
+
+                    <span style={{textDecoration:task.completed?"line-through":"none"}}>{task.text}</span>
                     <button
                     className='del-btn'
                     onClick={()=>deleteTask(index)}>Delete</button>
@@ -69,6 +79,7 @@ const Todolist = () => {
                     className='mov-btn'
                     onClick={()=>moveDown(index)}>
                         move Down</button>
+                    
 
                 </li>
             )}
